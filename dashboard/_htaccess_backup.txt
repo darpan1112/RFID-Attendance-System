@@ -1,0 +1,2 @@
+DirectoryIndex home.php index.php login.php
+Options -Indexes
