@@ -1,0 +1,270 @@
+/* 🌈 General Page Setup */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0d324d, #7f5a83);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🌐 Navbar (Top Bar) */
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0fb5b8;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #0fb5b8;
+  text-shadow: 0 0 8px #0fb5b8;
+}
+
+.nav-links a.active {
+  color: #0fb5b8;
+  border-bottom: 2px solid #0fb5b8;
+}
+
+/* 🧭 FIX: Proper Spacing Below Navbar for All Pages */
+main,
+.content,
+body main,
+body.app main,
+body.app main.content {
+  margin-top: 140px !important;
+  padding-top: 10px;
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+/* 🪟 Card Style */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 90%;
+  margin: 30px auto;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* 🧾 Headings */
+h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* 📋 Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  color: #0fb5b8;
+  font-weight: 600;
+}
+
+td {
+  color: #e0e0e0;
+}
+
+/* ✍️ Inputs and Buttons */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 5px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus, select:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+button {
+  background: #0fb5b8;
+  border: none;
+  color: #012;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background: #0ca3a5;
+  transform: scale(1.05);
+}
+
+/* 🧮 Form Section */
+.manage-users {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+/* 📊 Chart Section */
+#chartContainer {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+/* ✨ Hover effects for table rows */
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+/* 📍 Footer (Optional) */
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+/* 🎯 Centered Compact Home Screen Card */
+.welcome-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 40px 60px;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  margin: 140px auto;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-card h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: none;
+  margin-bottom: 10px;
+}
+
+.welcome-card .subtitle {
+  font-size: 18px;
+  color: #b8e3e3;
+  margin-bottom: 20px;
+}
+
+.welcome-card h3 {
+  margin-top: 20px;
+  color: #0fb5b8;
+}
+
+.welcome-card p {
+  font-size: 15px;
+  margin: 5px 0;
+  color: #e6e6e6;
+}
+
+.welcome-card .quote {
+  font-style: italic;
+  color: #cceeff;
+  margin-top: 15px;
+}
+
+/* 🪄 Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Layout */
+@media (max-width: 1024px) {
+  .card {
+    width: 95%;
+  }
+  input, select {
+    width: 100%;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  main,
+  .content {
+    margin-top: 160px !important;
+  }
+}
