@@ -1,0 +1,29 @@
+-- RFID Attendance V3 DB
+CREATE DATABASE IF NOT EXISTS rfid_attendance;
+USE rfid_attendance;
+
+CREATE TABLE IF NOT EXISTS admin (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) UNIQUE,
+  password VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  card_uid VARCHAR(64) UNIQUE NOT NULL,
+  name VARCHAR(200) DEFAULT 'Unknown',
+  gender VARCHAR(10) DEFAULT '',
+  department VARCHAR(100) DEFAULT '',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS attendance (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NULL,
+  card_uid VARCHAR(64) NOT NULL,
+  status VARCHAR(20) DEFAULT 'present',
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+INSERT IGNORE INTO admin (username, password) VALUES ('admin', '1234');
