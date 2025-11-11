@@ -1,2 +1,3 @@
 # RFID-Attendance-System
-IoT-based RFID Attendance System using NodeMCU ESP8266, RFID RC522, and XAMPP (PHP + MySQL)
+Automated Attendance Tracking | IoT + Web Integration | Real-Time Data Logging
+
